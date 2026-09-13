@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   // Enable React strict mode for better code quality
   reactStrictMode: true,
 
+<<<<<<< HEAD
   // Ignore ESLint during builds due to ESLint 10 CLI options change
   eslint: {
     ignoreDuringBuilds: true,
@@ -12,6 +13,8 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
 
+=======
+>>>>>>> 7c80b813b6ef61376b55c62a47cf9333c9fbe11e
   // Fix workspace root warning
   outputFileTracingRoot: __dirname,
 
