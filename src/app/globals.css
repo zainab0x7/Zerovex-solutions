@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  --color-brand-dark: #000000;
+  --color-brand-black: #000000;
+  --color-brand-red: #E31B2B;
+  --color-brand-red-hover: #C41220;
+  --color-brand-surface: #09090b;
+  --color-brand-border: #27272a;
+  --font-heading: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+@theme {
+  --color-red-500: #E31B2B;
+  --color-red-600: #C41220;
+  --color-red-700: #A20E19;
+  
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    background-color: rgba(227, 27, 43, 0.4);
+    color: #ffffff;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #000000;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #27272a;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #E31B2B;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+    background-color: #000000;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #F9FAFB;
+    background-color: #000000;
+    overflow-x: hidden;
+  }
+
+  *:focus-visible {
+    outline: 2px solid #E31B2B;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  .container-custom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  @media (min-width: 768px) {
+    .container-custom {
+      padding: 0 32px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container-custom {
+      padding: 0 48px;
+    }
+  }
+
+  /* Red Accent Line */
+  .red-accent-line {
+    width: 48px;
+    height: 2px;
+    background-color: #E31B2B;
+    display: block;
+  }
+
+  /* Link Underline Micro Interaction */
+  .nav-link-hover {
+    position: relative;
+  }
+
+  .nav-link-hover::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #E31B2B;
+    transition: width 0.25s ease-in-out;
+  }
+
+  .nav-link-hover:hover::after {
+    width: 100%;
+  }
+
+  /* Corporate Dark Card */
+  .corp-card {
+    background-color: #000000;
+    border: 1px solid #27272a;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .corp-card:hover {
+    border-color: rgba(227, 27, 43, 0.6);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(227, 27, 43, 0.15);
+  }
+
+  /* Primary Red Button */
+  .btn-brand-red {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 8px;
+    background-color: #E31B2B;
+    color: #ffffff;
+    border: 1px solid #E31B2B;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .btn-brand-red:hover {
+    background-color: #C41220;
+    border-color: #C41220;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(227, 27, 43, 0.35);
+  }
+
+  .btn-brand-red:active {
+    transform: translateY(0);
+  }
+
+  /* Secondary Outline Button */
+  .btn-brand-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 28px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    border-radius: 8px;
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 1px solid #27272a;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .btn-brand-outline:hover {
+    border-color: #E31B2B;
+    background-color: #09090b;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  .btn-brand-outline:active {
+    transform: translateY(0);
+  }
+}
