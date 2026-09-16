@@ -129,12 +129,12 @@ export default function ProcessPage() {
 
       {/* CTA */}
       <ScrollReveal className="container-custom">
-        <div className="corp-card p-10 sm:p-14 bg-gray-900 text-white border-2 border-[#E31B2B] text-center space-y-6 shadow-2xl">
+        <div className="corp-card p-10 sm:p-14 bg-white text-zinc-900 border-2 border-[#E31B2B] text-center space-y-6 shadow-xl">
           <div className="max-w-xl mx-auto space-y-4">
-            <h2 className="text-3xl font-extrabold text-white font-heading">
+            <h2 className="text-3xl font-extrabold text-zinc-900 font-heading">
               Ready to Kick Off Phase 01?
             </h2>
-            <p className="text-sm text-gray-300">
+            <p className="text-sm text-zinc-600">
               Schedule a technical discovery call with ZeroVex Solutions today.
             </p>
             <div className="pt-2">

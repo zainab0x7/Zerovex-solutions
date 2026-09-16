@@ -22,10 +22,10 @@ export default function PageLoader() {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="fixed inset-0 z-[10000] bg-black flex flex-col items-center justify-center pointer-events-none select-none"
+          className="fixed inset-0 z-[10000] bg-white flex flex-col items-center justify-center pointer-events-none select-none"
         >
           <div className="space-y-3 text-center">
-            <h1 className="text-2xl sm:text-3xl font-extrabold font-heading text-white tracking-widest uppercase">
+            <h1 className="text-2xl sm:text-3xl font-extrabold font-heading text-zinc-900 tracking-widest uppercase">
               ZERO <span className="text-[#E31B2B]">VEX</span>
             </h1>
 

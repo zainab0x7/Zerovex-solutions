@@ -394,12 +394,12 @@ export default async function ServiceDetailPage({
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {service.problem.map((prob, idx) => (
-            <div key={idx} className="corp-card p-6 border-l-4 border-l-amber-500 space-y-2">
-              <div className="flex items-center gap-2 text-amber-500 font-bold text-sm uppercase tracking-wider">
+            <div key={idx} className="corp-card p-6 border-l-4 border-l-amber-500 space-y-2 bg-white border border-zinc-200 shadow-sm">
+              <div className="flex items-center gap-2 text-amber-600 font-bold text-sm uppercase tracking-wider">
                 <AlertTriangle className="h-4 w-4" />
                 <span>{prob.title}</span>
               </div>
-              <p className="text-xs text-zinc-400 leading-relaxed">
+              <p className="text-xs text-zinc-600 leading-relaxed">
                 {prob.desc}
               </p>
             </div>
@@ -416,7 +416,7 @@ export default async function ServiceDetailPage({
               eyebrow="OUR SOLUTION"
               title="Tailored Engineering Built For Commercial Impact"
             />
-            <p className="text-base text-zinc-300 leading-relaxed">
+            <p className="text-base text-zinc-600 leading-relaxed">
               {service.solution}
             </p>
             <div className="pt-2">
@@ -427,13 +427,13 @@ export default async function ServiceDetailPage({
             </div>
           </div>
 
-          <div className="lg:col-span-6 corp-card p-8 sm:p-10 border-l-4 border-l-[#E31B2B] space-y-6">
-            <h3 className="text-xl font-bold text-white font-heading">
+          <div className="lg:col-span-6 corp-card p-8 sm:p-10 border-l-4 border-l-[#E31B2B] bg-white border border-zinc-200 shadow-sm space-y-6">
+            <h3 className="text-xl font-bold text-zinc-900 font-heading">
               What We Deliver
             </h3>
             <ul className="grid grid-cols-1 gap-3">
               {service.whatWeDeliver.map((item, idx) => (
-                <li key={idx} className="flex items-center gap-3 text-sm text-zinc-300">
+                <li key={idx} className="flex items-center gap-3 text-sm text-zinc-700">
                   <CheckCircle className="h-4 w-4 text-[#E31B2B] shrink-0" />
                   <span>{item}</span>
                 </li>
@@ -445,7 +445,7 @@ export default async function ServiceDetailPage({
       </ScrollReveal>
 
       {/* 5. KEY FEATURES */}
-      <section className="bg-[#111820] py-20 border-y border-[#253342]">
+      <section className="bg-zinc-50 py-20 border-y border-zinc-200">
         <ScrollReveal className="container-custom space-y-12">
           <SectionHeading
             eyebrow="SPECIFICATIONS"
@@ -455,12 +455,12 @@ export default async function ServiceDetailPage({
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {service.features.map((feat, idx) => (
-              <div key={idx} className="corp-card p-6 space-y-3 hover:border-[#E31B2B]/60 transition-all">
-                <div className="w-10 h-10 rounded bg-[#18222D] border border-[#253342] text-[#E31B2B] flex items-center justify-center font-mono font-bold">
+              <div key={idx} className="corp-card p-6 space-y-3 bg-white border border-zinc-200 shadow-sm hover:border-[#E31B2B]/60 transition-all">
+                <div className="w-10 h-10 rounded bg-red-50 border border-red-100 text-[#E31B2B] flex items-center justify-center font-mono font-bold">
                   0{idx + 1}
                 </div>
-                <h4 className="text-lg font-bold text-white font-heading">{feat.title}</h4>
-                <p className="text-xs text-zinc-400 leading-relaxed">{feat.desc}</p>
+                <h4 className="text-lg font-bold text-zinc-900 font-heading">{feat.title}</h4>
+                <p className="text-xs text-zinc-600 leading-relaxed">{feat.desc}</p>
               </div>
             ))}
           </div>
@@ -476,11 +476,11 @@ export default async function ServiceDetailPage({
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {service.benefits.map((b, idx) => (
-            <div key={idx} className="corp-card p-6 flex items-start gap-4">
-              <div className="p-2.5 rounded bg-[#18222D] border border-[#253342] text-[#E31B2B] shrink-0">
+            <div key={idx} className="corp-card p-6 flex items-start gap-4 bg-white border border-zinc-200 shadow-sm">
+              <div className="p-2.5 rounded bg-red-50 border border-red-100 text-[#E31B2B] shrink-0">
                 <Zap className="h-5 w-5" />
               </div>
-              <p className="text-sm text-zinc-300 leading-relaxed pt-1">{b}</p>
+              <p className="text-sm text-zinc-700 leading-relaxed pt-1">{b}</p>
             </div>
           ))}
         </div>
@@ -518,27 +518,27 @@ export default async function ServiceDetailPage({
 
       {/* 9. CTA */}
       <ScrollReveal className="container-custom">
-        <div className="corp-card p-10 sm:p-14 bg-[#0A0E14] border-2 border-[#E31B2B] text-center space-y-6">
+        <div className="corp-card p-10 sm:p-14 bg-gradient-to-br from-zinc-50 via-white to-red-50/40 border-2 border-[#E31B2B] text-center space-y-6 shadow-xl">
           <div className="max-w-xl mx-auto space-y-4">
             <span className="text-xs font-mono tracking-widest text-[#E31B2B] uppercase font-semibold">
               READY TO KICK OFF?
             </span>
-            <h2 className="text-3xl font-extrabold text-white font-heading">
+            <h2 className="text-3xl font-extrabold text-zinc-900 font-heading">
               Elevate Your Business With {service.title}
             </h2>
-            <p className="text-sm text-zinc-400">
+            <p className="text-sm text-zinc-600">
               Speak directly with our digital architects to map out your project details.
             </p>
             <div className="pt-2">
-              <Link href="/contact" className="btn-brand-red text-xs py-3.5 px-8 group">
+              <Link href="/contact" className="btn-brand-red text-xs py-3.5 px-8 group inline-flex items-center justify-center">
                 <span>Start Project Inquiry</span>
-                <ArrowUpRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <ArrowUpRight className="h-4 w-4 ml-2 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </Link>
             </div>
           </div>
         </div>
       </ScrollReveal>
-
     </div>
   );
 }
+

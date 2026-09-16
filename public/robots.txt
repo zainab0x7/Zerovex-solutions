@@ -1,17 +1,6 @@
-<<<<<<< HEAD
 User-agent: *
 Allow: /
 
 Sitemap: https://www.zerovexsolutions.site/sitemap.xml
-=======
-# robots.txt for Zerovex Solutions
-User-agent: *
-Allow: /
 
-# Sitemap
-Sitemap: https://zerovexsolutions.site/sitemap.xml
-
-# Disallow admin and API routes (if any)
 Disallow: /api/
-Disallow: /admin/
->>>>>>> 7c80b813b6ef61376b55c62a47cf9333c9fbe11e

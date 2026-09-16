@@ -17,7 +17,7 @@ interface TestimonialSectionProps {
 
 export default function TestimonialSection({ testimonials = [] }: TestimonialSectionProps) {
   return (
-    <section className="py-20 bg-black border-y border-zinc-800">
+    <section className="py-20 bg-white border-y border-zinc-200">
       <div className="container-custom space-y-12">
         <SectionHeading
           eyebrow="CLIENT FEEDBACK & SOCIAL PROOF"
@@ -34,17 +34,17 @@ export default function TestimonialSection({ testimonials = [] }: TestimonialSec
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="corp-card p-8 bg-black border border-zinc-800 space-y-4 border-l-4 border-l-[#E31B2B]"
+                className="corp-card p-8 bg-zinc-50 border border-zinc-200 space-y-4 border-l-4 border-l-[#E31B2B]"
               >
-                <p className="text-base text-zinc-300 leading-relaxed italic">
+                <p className="text-base text-zinc-700 leading-relaxed italic">
                   "{t.quote}"
                 </p>
-                <div className="pt-4 border-t border-zinc-800 flex items-center justify-between">
+                <div className="pt-4 border-t border-zinc-200 flex items-center justify-between">
                   <div>
-                    <h4 className="text-sm font-bold text-white font-heading">
+                    <h4 className="text-sm font-bold text-zinc-900 font-heading">
                       {t.author}
                     </h4>
-                    <span className="text-xs text-zinc-400 font-mono">
+                    <span className="text-xs text-zinc-600 font-mono">
                       {t.role}, {t.company}
                     </span>
                   </div>
@@ -58,17 +58,17 @@ export default function TestimonialSection({ testimonials = [] }: TestimonialSec
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="max-w-2xl mx-auto corp-card p-10 bg-black border border-zinc-800 text-center space-y-4 shadow-sm"
+            className="max-w-2xl mx-auto corp-card p-10 bg-zinc-50 border border-zinc-200 text-center space-y-4 shadow-sm"
           >
-            <div className="w-12 h-12 rounded-full bg-red-950/40 text-[#E31B2B] flex items-center justify-center mx-auto border border-red-900/50">
+            <div className="w-12 h-12 rounded-full bg-red-50 text-[#E31B2B] flex items-center justify-center mx-auto border border-red-200">
               <MessageSquareQuote className="h-6 w-6" />
             </div>
 
-            <h3 className="text-xl font-bold text-white font-heading">
+            <h3 className="text-xl font-bold text-zinc-900 font-heading">
               Client Testimonials
             </h3>
 
-            <p className="text-sm text-zinc-400 leading-relaxed max-w-md mx-auto italic font-medium">
+            <p className="text-sm text-zinc-600 leading-relaxed max-w-md mx-auto italic font-medium">
               "Client testimonials will be featured here as projects are completed."
             </p>
 

@@ -33,7 +33,7 @@ const points = [
 
 export default function WhyChooseUsPoints() {
   return (
-    <section className="py-24 bg-black border-y border-zinc-800">
+    <section className="py-24 bg-white border-y border-zinc-200">
       <div className="container-custom space-y-12">
         <SectionHeading
           eyebrow="OUR DIFFERENCE"
@@ -50,7 +50,7 @@ export default function WhyChooseUsPoints() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: idx * 0.1 }}
-              className="corp-card p-8 bg-black border border-zinc-800 space-y-4 hover:border-[#E31B2B]/60 transition-all duration-300 relative group overflow-hidden"
+              className="corp-card p-8 bg-zinc-50 border border-zinc-200 space-y-4 hover:border-[#E31B2B]/60 transition-all duration-300 relative group overflow-hidden"
             >
               {/* Top Accent Line */}
               <div className="w-12 h-[3px] bg-[#E31B2B]" />
@@ -64,11 +64,11 @@ export default function WhyChooseUsPoints() {
                 </span>
               </div>
 
-              <h3 className="text-xl font-bold text-white font-heading leading-snug">
+              <h3 className="text-xl font-bold text-zinc-900 font-heading leading-snug">
                 {pt.title}
               </h3>
 
-              <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+              <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
                 {pt.description}
               </p>
             </motion.div>

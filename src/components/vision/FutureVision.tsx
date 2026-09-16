@@ -56,9 +56,9 @@ const roadmapNodes = [
 
 export default function FutureVision() {
   return (
-    <section className="relative bg-zinc-950 py-28 text-white border-t border-white/10 overflow-hidden">
+    <section className="relative bg-white py-28 text-zinc-900 border-t border-zinc-200 overflow-hidden">
       {/* Background Ambient Glow */}
-      <div className="pointer-events-none absolute right-1/4 top-1/3 h-[500px] w-[500px] rounded-full bg-red-600/10 blur-[180px]" />
+      <div className="pointer-events-none absolute right-1/4 top-1/3 h-[500px] w-[500px] rounded-full bg-red-500/5 blur-[180px]" />
 
       <div className="container-custom relative z-10 space-y-16">
         {/* Section Header */}
@@ -67,9 +67,9 @@ export default function FutureVision() {
             initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 font-mono text-xs font-bold tracking-widest text-red-500 uppercase"
+            className="inline-flex items-center gap-2 font-mono text-xs font-bold tracking-widest text-[#E31B2B] uppercase"
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-red-500" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#E31B2B]" />
             STRATEGIC ROADMAP
           </motion.div>
 
@@ -78,10 +78,10 @@ export default function FutureVision() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl sm:text-6xl font-black uppercase tracking-tight leading-[1.05]"
+            className="text-4xl sm:text-6xl font-black uppercase tracking-tight leading-[1.05] font-heading text-zinc-900"
           >
             TODAY WE BUILD SOLUTIONS. <br />
-            <span className="text-gradient-red">TOMORROW WE BUILD TECHNOLOGY.</span>
+            <span className="text-[#E31B2B]">TOMORROW WE BUILD TECHNOLOGY.</span>
           </motion.h2>
 
           <motion.p
@@ -89,7 +89,7 @@ export default function FutureVision() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-base text-white/60 font-light"
+            className="text-base text-zinc-600 font-light"
           >
             Our evolution from a digital agency into a global technology ecosystem.
           </motion.p>
@@ -98,7 +98,7 @@ export default function FutureVision() {
         {/* Visual Roadmap Timeline */}
         <div className="relative max-w-4xl mx-auto pt-6">
           {/* Vertical Connecting Cable */}
-          <div className="absolute left-6 md:left-1/2 top-10 bottom-10 w-0.5 -translate-x-1/2 bg-gradient-to-b from-red-500 via-red-600/40 to-white/10" />
+          <div className="absolute left-6 md:left-1/2 top-10 bottom-10 w-0.5 -translate-x-1/2 bg-gradient-to-b from-[#E31B2B] via-red-400/40 to-zinc-300" />
 
           <div className="space-y-12 relative">
             {roadmapNodes.map((node, index) => {
@@ -116,10 +116,10 @@ export default function FutureVision() {
                   }`}
                 >
                   {/* Central Timeline Dot */}
-                  <div className="absolute left-6 md:left-1/2 top-6 md:top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-red-500 bg-black shadow-[0_0_20px_rgba(239,68,68,0.8)]">
+                  <div className="absolute left-6 md:left-1/2 top-6 md:top-1/2 -translate-x-1/2 -translate-y-1/2 z-10 flex h-8 w-8 items-center justify-center rounded-full border-2 border-[#E31B2B] bg-white shadow-md">
                     <span
                       className={`h-2.5 w-2.5 rounded-full ${
-                        node.isCurrent ? "bg-red-500 animate-pulse" : "bg-white/40"
+                        node.isCurrent ? "bg-[#E31B2B] animate-pulse" : "bg-zinc-400"
                       }`}
                     />
                   </div>
@@ -127,32 +127,32 @@ export default function FutureVision() {
                   {/* Content Box */}
                   <div className="ml-14 md:ml-0 md:w-1/2 px-0 md:px-8">
                     <div
-                      className={`group relative rounded-3xl border p-6 backdrop-blur-xl transition-all duration-300 ${
+                      className={`group relative rounded-3xl border p-6 backdrop-blur-xl transition-all duration-300 shadow-sm ${
                         node.isFuture
-                          ? "border-red-500/30 bg-zinc-950/80 shadow-[0_0_30px_rgba(239,68,68,0.1)]"
-                          : "border-white/15 bg-black/80 hover:border-red-500/50"
+                          ? "border-red-200 bg-red-50/30"
+                          : "border-zinc-200 bg-white hover:border-[#E31B2B]/50"
                       }`}
                     >
                       <div className="flex items-center justify-between gap-2 mb-3">
-                        <span className="font-mono text-xs font-bold text-red-500">
+                        <span className="font-mono text-xs font-bold text-[#E31B2B]">
                           {node.year}
                         </span>
                         <span
                           className={`rounded-full px-2.5 py-0.5 text-[9px] font-mono font-bold uppercase border ${
                             node.isFuture
-                              ? "bg-red-500/20 text-red-400 border-red-500/40"
-                              : "bg-white/10 text-white/80 border-white/20"
+                              ? "bg-red-100 text-red-700 border-red-200"
+                              : "bg-zinc-100 text-zinc-700 border-zinc-200"
                           }`}
                         >
                           {node.status}
                         </span>
                       </div>
 
-                      <h3 className="text-xl font-black uppercase text-white tracking-tight mb-2">
+                      <h3 className="text-xl font-black uppercase text-zinc-900 tracking-tight mb-2 font-heading">
                         {node.title}
                       </h3>
 
-                      <p className="text-xs text-white/60 leading-relaxed font-light">
+                      <p className="text-xs text-zinc-600 leading-relaxed font-light">
                         {node.desc}
                       </p>
                     </div>
@@ -168,17 +168,17 @@ export default function FutureVision() {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto rounded-3xl border border-red-500/40 bg-zinc-950 p-8 sm:p-12 text-center backdrop-blur-2xl shadow-[0_0_60px_rgba(239,68,68,0.2)] space-y-4"
+          className="max-w-4xl mx-auto rounded-3xl border-2 border-[#E31B2B] bg-gradient-to-br from-zinc-50 via-white to-red-50/40 p-8 sm:p-12 text-center shadow-xl space-y-4"
         >
-          <div className="inline-flex items-center gap-2 font-mono text-xs font-bold tracking-widest text-red-400 uppercase">
+          <div className="inline-flex items-center gap-2 font-mono text-xs font-bold tracking-widest text-[#E31B2B] uppercase">
             <Rocket className="h-4 w-4" /> OUR AMBITION & VISION
           </div>
 
-          <p className="text-xl sm:text-2xl font-semibold text-white leading-relaxed">
+          <p className="text-xl sm:text-2xl font-semibold text-zinc-900 leading-relaxed">
             &ldquo;To build Zerovex Solutions into a globally recognized technology company creating products, platforms and digital infrastructure for businesses around the world.&rdquo;
           </p>
 
-          <span className="block font-mono text-xs text-white/40 uppercase tracking-widest pt-2">
+          <span className="block font-mono text-xs text-zinc-500 uppercase tracking-widest pt-2">
             Zerovex Leadership Statement
           </span>
         </motion.div>

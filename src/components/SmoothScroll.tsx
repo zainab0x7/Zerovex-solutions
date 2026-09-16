@@ -2,7 +2,6 @@
 
 import { useEffect, ReactNode } from "react";
 import Lenis from "lenis";
-<<<<<<< HEAD
 import { gsap, ScrollTrigger } from "@/lib/gsap";
 
 export default function SmoothScroll({ children }: { children: ReactNode }) {
@@ -12,11 +11,6 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       return;
     }
 
-=======
-
-export default function SmoothScroll({ children }: { children: ReactNode }) {
-  useEffect(() => {
->>>>>>> 7c80b813b6ef61376b55c62a47cf9333c9fbe11e
     const lenis = new Lenis({
       duration: 1.2,
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -24,7 +18,6 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       gestureOrientation: "vertical",
       smoothWheel: true,
       wheelMultiplier: 1,
-<<<<<<< HEAD
       touchMultiplier: 1.8,
       infinite: false,
     });
@@ -41,23 +34,6 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
 
     return () => {
       gsap.ticker.remove(updateGSAPTicker);
-=======
-      touchMultiplier: 2,
-      infinite: false,
-    });
-
-    let rafId: number;
-
-    function raf(time: number) {
-      lenis.raf(time);
-      rafId = requestAnimationFrame(raf);
-    }
-
-    rafId = requestAnimationFrame(raf);
-
-    return () => {
-      cancelAnimationFrame(rafId);
->>>>>>> 7c80b813b6ef61376b55c62a47cf9333c9fbe11e
       lenis.destroy();
     };
   }, []);

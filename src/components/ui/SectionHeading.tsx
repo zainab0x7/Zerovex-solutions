@@ -23,12 +23,12 @@ export default function SectionHeading({
           </span>
         </div>
       )}
-      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white font-heading leading-tight">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 font-heading leading-tight">
         {title}
       </h2>
       <div className={`w-12 h-[2px] bg-[#E31B2B] ${centered ? "mx-auto" : ""}`} />
       {subtitle && (
-        <p className="text-base sm:text-lg text-zinc-400 leading-relaxed pt-1">
+        <p className="text-base sm:text-lg text-zinc-600 leading-relaxed pt-1">
           {subtitle}
         </p>
       )}

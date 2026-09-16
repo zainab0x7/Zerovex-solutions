@@ -15,7 +15,7 @@ const steps = [
 
 export default function BusinessJourneyTimeline() {
   return (
-    <section className="py-24 bg-gray-900 text-white border-y border-gray-800">
+    <section className="py-24 bg-white text-zinc-900 border-y border-zinc-200">
       <div className="container-custom space-y-16">
         
         {/* Header */}
@@ -43,29 +43,29 @@ export default function BusinessJourneyTimeline() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: idx * 0.1 }}
-                className="relative bg-zinc-950 border border-zinc-800 p-6 space-y-4 group hover:border-[#E31B2B] transition-all duration-300 flex flex-col justify-between"
+                className="relative bg-zinc-50 border border-zinc-200 p-6 space-y-4 group hover:border-[#E31B2B] transition-all duration-300 flex flex-col justify-between"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-mono font-extrabold text-[#E31B2B]">
                       {item.step}
                     </span>
-                    <div className="p-2 rounded bg-zinc-900 border border-zinc-800 text-zinc-400 group-hover:text-white group-hover:bg-[#E31B2B] transition-colors">
+                    <div className="p-2 rounded bg-white border border-zinc-200 text-zinc-700 group-hover:text-white group-hover:bg-[#E31B2B] transition-colors">
                       <Icon className="h-4 w-4" />
                     </div>
                   </div>
 
-                  <h4 className="text-lg font-bold font-heading text-white">
+                  <h4 className="text-lg font-bold font-heading text-zinc-900">
                     {item.name}
                   </h4>
 
-                  <p className="text-xs text-zinc-400 leading-relaxed font-normal">
+                  <p className="text-xs text-zinc-600 leading-relaxed font-normal">
                     {item.desc}
                   </p>
                 </div>
 
                 {!isLast && (
-                  <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-20 text-zinc-700">
+                  <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 z-20 text-zinc-400">
                     <ArrowRight className="h-5 w-5" />
                   </div>
                 )}
